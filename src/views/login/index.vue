@@ -81,7 +81,7 @@ export default {
           })
           window.localStorage.setItem('user-info', JSON.stringify(result.data))
           // 编程式导航
-          this.$router.push('/home')
+          //   this.$router.push('/home')
           //   const result = await LoginByMobile(this.formData)
           window.localStorage.setItem('user-info', JSON.stringify(result.data))
           // 编程式导航
