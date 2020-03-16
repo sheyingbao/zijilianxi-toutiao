@@ -71,23 +71,23 @@ export default {
       // validate  手动校验表单数据
       // isOK是 当前表单是否通过了校验
       // result是当前的校验结果
-    //   this.$refs.loginForm.validate(async isOK => {
-    //     if (isOK) {
-    //       // 通过了校验
-    //       // let result = await this.$axios({
-    //       //   method: 'post',
-    //       //   url: '/authorizations',
-    //       //   data: this.formData // post参数是在data中写入的
-    //       // })
-    //       // window.localStorage.setItem('user-info', JSON.stringify(result.data))
-    //       // // 编程式导航
-    //       // this.$router.push('/home')
-    //     //   const result = await LoginByMobile(this.formData)
-    //       window.localStorage.setItem('user-info', JSON.stringify(result.data))
-    //       // 编程式导航
-    //       this.$router.push('/home')
-    //     }
-    //   })
+      this.$refs.loginForm.validate(async isOK => {
+        if (isOK) {
+        //   通过了校验
+          const result = await this.$axios({
+            method: 'post',
+            url: '/authorizations',
+            data: this.formData // post参数是在data中写入的
+          })
+          window.localStorage.setItem('user-info', JSON.stringify(result.data))
+          // 编程式导航
+          this.$router.push('/home')
+          //   const result = await LoginByMobile(this.formData)
+          window.localStorage.setItem('user-info', JSON.stringify(result.data))
+          // 编程式导航
+          this.$router.push('/home')
+        }
+      })
     }
   }
 }

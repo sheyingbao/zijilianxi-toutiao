@@ -5,6 +5,9 @@ import router from './router'
 // import ElementUI from 'element-ui' // 'element-ui';
 import './styles/index.less'
 import 'element-ui/lib/theme-chalk/index.css'
+// import './styles/index.less'
+import axios from 'axios'
+
 import {
   Pagination,
   Dialog,
@@ -83,8 +86,9 @@ import {
   MessageBox,
   Message,
   Notification
-} from 'element-ui'
-
+} from 'element-ui' // 引入axios
+axios.defaults.baseURL = 'http://ttapi.research.itcast.cn/mp/v1_0' //
+Vue.prototype.$axios = axios // 把axios插件给了对象的原型属性
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Autocomplete)
