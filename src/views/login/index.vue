@@ -74,18 +74,23 @@ export default {
       this.$refs.loginForm.validate(async isOK => {
         if (isOK) {
         //   通过了校验
-          const result = await this.$axios({
+        //   const result = await
+          this.$axios({
             method: 'post',
             url: '/authorizations',
             data: this.formData // post参数是在data中写入的
+          }).then(result => {
+            //   const result = await LoginByMobile(this.formData)
+            window.localStorage.setItem('user-info', JSON.stringify(result.data))
+            // 编程式导航
+            this.$router.push('/home')
+          }).catch(() => {
+            // $messag是element注入vue的方法
+            this.$message({
+              message: '当前用户名或则密码错误',
+              type: 'warning'
+            })
           })
-          window.localStorage.setItem('user-info', JSON.stringify(result.data))
-          // 编程式导航
-          //   this.$router.push('/home')
-          //   const result = await LoginByMobile(this.formData)
-          window.localStorage.setItem('user-info', JSON.stringify(result.data))
-          // 编程式导航
-          this.$router.push('/home')
         }
       })
     }
