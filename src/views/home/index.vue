@@ -1,9 +1,10 @@
 <template>
 <!-- 最外成容器-->
 <el-container>
-  <!-- 侧便拦 -->
-  <el-aside>
-    左侧内容
+  <!-- 侧便拦 容器-->
+  <el-aside style='width:200px;height:100vh;background-color:#323745'>
+    <!-- 左侧菜单 -->
+ <layout-aside></layout-aside>
   </el-aside>
   <el-container>
     <!-- 头部内容 -->
@@ -15,31 +16,14 @@
 </template>
 
 <script>
+import layoutAside from '../../components/home/layout-aside.vue'
+// import layoutHeader from '../../components/home/layout-header.vue'
 export default {
-  data () {
-    return {
+  components: {
+    'layout-aside': layoutAside
+    // 'layout-header': layoutHeader
+  }
 
-    }
-  },
-  computed: {},
-  watch: {},
-  methods: {
-
-  },
-  created () {
-
-  },
-  mounted () {
-
-  },
-  beforeCreate () {},
-  beforeMount () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  activated () {},
-  components: {}
 }
 </script>
 
