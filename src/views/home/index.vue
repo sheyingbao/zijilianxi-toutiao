@@ -8,7 +8,9 @@
   </el-aside>
   <el-container>
     <!-- 头部内容 -->
-    <el-header>头部内容</el-header>
+    <el-header>
+      <layout-header></layout-header>
+      </el-header>
     <!-- 中间区域-->
     <el-main>中间内容</el-main>
   </el-container>
@@ -16,11 +18,11 @@
 </template>
 
 <script>
-import layoutAside from '../../components/home/layout-aside.vue'
+// import layoutAside from '../../components/home/layout-aside.vue'
 // import layoutHeader from '../../components/home/layout-header.vue'
 export default {
   components: {
-    'layout-aside': layoutAside
+    // 'layout-aside': layoutAside,
     // 'layout-header': layoutHeader
   }
 
