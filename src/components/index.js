@@ -1,6 +1,6 @@
 import layoutAside from './home/layout-aside'
 import layoutHeader from './home/layout-header'
-// // import breadCrumb from './common/bread-crumb'
+import breadCrumb from './common/bread-crumb'
 // // import 'quill/dist/quill.core.css'
 // // import 'quill/dist/quill.snow.css'
 // // import 'quill/dist/quill.bubble.css'
@@ -14,7 +14,7 @@ export default {
   install (Vue) {
     Vue.component('layout-header', layoutHeader) // 注册了layout-header组件
     Vue.component('layout-aside', layoutAside) // 注册左侧菜单组件
-    // Vue.component('bread-crumb', breadCrumb) // 注册面包屑组件
+    Vue.component('bread-crumb', breadCrumb) // 注册面包屑组件
     // Vue.component('quill-editor', quillEditor) // 注册quill组件成为全局对象
     // Vue.component('cover-image', coverImg)
     // Vue.component('select-images', selectImg)
