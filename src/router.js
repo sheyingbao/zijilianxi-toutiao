@@ -32,17 +32,18 @@ export default new Router({
         {
           path: '/home/comment', // 评论列表
           component: () => import('./views/comment') // 按需加载的写法
+        }, {
+          path: '/home/material', // 素材列表
+          component: () => import('./views/material') // 按需加载的写法
         }
-        // {
-        //   path: '/home/material', // 素材列表
-        //   component: () => import('./views/material') // 按需加载的写法
-        // }, {
+        //  {
         //   path: '/home/articles', // 内容列表
         //   component: () => import('./views/articles') // 按需加载的写法
         // }, {
         //   path: '/home/publish', // 发表文章
         //   component: () => import('./views/publish') // 按需加载的写法
-        // }, {
+        // },
+        // {
         //   path: '/home/publish/:articleId', // 编辑文章  动态路由 定义了一个articleId
         //   component: () => import('./views/publish') // 按需加载的写法
         // }, {

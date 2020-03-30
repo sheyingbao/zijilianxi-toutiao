@@ -67,17 +67,17 @@ export default {
     // 打开或者关闭
     async closeOrOpen (row) {
       const mess = row.comment_status ? '关闭' : '打开'
-      // this.$confirm(`您确定要${mess}评论吗`, '提示').then(() => {
-      //   this.$axios({
-      //     method: 'put',
-      //     url: '/comments/status',
-      //     params: { article_id: row.id.toString() },
-      //     data: { allow_comment: !row.comment_status } // 状态是反着的
-      //   }).then(() => {
-      //     // 如果进入到then函数 一定成功
-      //     this.getComments()
-      //   })
-      // })
+      this.$confirm(`您确定要${mess}评论吗`, '提示').then(() => {
+        this.$axios({
+          method: 'put',
+          url: '/comments/status',
+          params: { article_id: row.id.toString() },
+          data: { allow_comment: !row.comment_status } // 状态是反着的
+        }).then(() => {
+          // 如果进入到then函数 一定成功
+          this.getComments()
+        })
+      })
       try {
         await this.$confirm(`您确定要${mess}评论吗`, '提示')
         await this.$axios({
@@ -97,7 +97,7 @@ export default {
     // axios 中 有一个对象存储的就是query参数  params
     // axios 中 有一个对象存储的就是body参数  data
     async getComments () {
-      this.loading = true // 将加载进度设置成加载状态
+      // this.loading = true // 将加载进度设置成加载状态
       const pageParams = {
         page: this.page.currentPage,
         per_page: this.page.pageSize

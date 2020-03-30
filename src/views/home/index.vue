@@ -2,7 +2,7 @@
 <!-- 最外成容器-->
 <el-container>
   <!-- 侧便拦 容器-->
-  <el-aside style='width:200px;height:100vh;background-color:#323745'>
+  <el-aside style='width:200px;min-height:100vh;background-color:#323745'>
     <!-- 左侧菜单 -->
  <layout-aside></layout-aside>
   </el-aside>
@@ -24,10 +24,10 @@
 // import layoutAside from '../../components/home/layout-aside.vue'
 // import layoutHeader from '../../components/home/layout-header.vue'
 export default {
-  components: {
-    // 'layout-aside': layoutAside,
-    // 'layout-header': layoutHeader
-  }
+  // components: {
+  //   // 'layout-aside': layoutAside,
+  //   // 'layout-header': layoutHeader
+  // }
 
 }
 </script>

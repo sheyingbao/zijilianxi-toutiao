@@ -55,13 +55,13 @@
 <script>
 // import eventBus from '../../utils/eventBus'
 export default {
-  // data () {
-  //   return {
-  //     collapse: false, // 默认是展开
-  //     bigImg: require('../../assets/img/静态资源/logo_admin.png'), // 大图
-  //     smallImg: require('../../assets/img/静态资源/toutiao.png') // 小图
-  //   }
-  // }
+  data () {
+    return {
+      collapse: false, // 默认是展开
+      bigImg: require('../../assets/img/静态资源/logo_admin.png'), // 大图
+      smallImg: require('../../assets/img/静态资源/toutiao.png') // 小图
+    }
+  }
   // created () {
   //   //   展开或者折叠每次取相反
   //   eventBus.$on('collopseOrClose', () => {
